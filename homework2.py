@@ -1,9 +1,13 @@
-def pascal_triangle(n):
-    row = [1]
-    y = [0]
-    for _ in range(max(n, 0)):
-        print(row)
-        row = list(left + right for left, right in zip(row + y, y + row))
+from collections import Counter
 
 
-pascal_triangle(8)
+# Pangram words does not contain symbols
+def is_pangram(word):
+    text = word.lower().replace(' ', '')  # remove all spaces
+    letters_counts = Counter(text)  # count each letter
+    return len(letters_counts) == 26
+
+
+print(is_pangram('Jackdaws love my big sphinx of quartz'))
+print(is_pangram('The jay pig fox zebra and my wolves quack'))
+print(is_pangram('Hello world'))
