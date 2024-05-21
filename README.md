@@ -1,28 +1,33 @@
 The first task:
-Magic Dates
-A magic date is a date where the day multiplied by the month equals the number formed by the last two digits of the
-year.
-Write a function is_magic(date) that takes a string representation of a valid date as an argument and returns True if the
-date is magic, and False otherwise.
-The following code:
-print(is_magic('10.06.1960'))
-print(is_magic('11.06.1960'))
-Should output:
-True
-False
+Write a program to print n numbers square
+
+Example we want to see 3 numbers square, although we
+are know program starting count from zero, the result will
+be 0,1 and 2 and need to print 0,1,2 squares.
+Result must to be look like this
+0
+1
+4
+
+Example 2
+Input: 5
+Output:
+0
+1
+4
+9
+16
+��The program also not allow user input less than 1 an
+not greater than 20.
+
+1 &lt;= n &lt;= 20
 
 The second task:
-Pangrams
-A pangram is a sentence that contains every letter of the alphabet. Pangrams are typically used to display fonts, so that
-all glyphs can be viewed in a single phrase.
-Write a function is_pangram(text) that takes a string of English text as an argument and returns True if the text is a
-pangram and False otherwise.
-Note 1: It is guaranteed that the input string contains only English letters and spaces.
-Note 2: The following code:
-print(is_pangram('Jackdaws love my big sphinx of quartz'))
-print(is_pangram('The jay pig fox zebra and my wolves quack'))
-print(is_pangram('Hello world'))
-Should output:
-True
-True
-False
+Write a program where you enter a year, if the program
+understands that it is a leap year it should return True
+And if it is not a leap year, it should return False
+
+��Tip: To determine the leap year, you can study throug
+this link https://www.timeanddate.com/date/leapyear.html️
+��After studying, consider in the program that 1800, 1900
+2100, 2200, 2300 and 2500 are not leap years :)
