@@ -1,12 +1,16 @@
-while True:
-    u_input = input('Enter num (1-20) (or "q" to quit): ')
-    if u_input.lower() == 'q':
-        break
-    try:
-        if not (1 <= int(u_input) <= 20):
-            print('Enter the number between 1 and 20.')
-        else:
-            for num in range(1, int(u_input) + 1):
-                print(num * num)
-    except ValueError:
-        print('Uncorrected input, try again.')
+def print_triangle(height):
+    # Set triangle height range
+    for i in range(1, height + 1):
+        print(" " * (height - i) + "*" * (2 * i - 1))  # for symmetry, we use odd numbers
+
+
+def user_input():
+    height = int(input("Enter the height of the triangle:"))
+    if height <= 0 or height > 10:  # we set here min and max height
+        print("Error: Enter a positive number.")
+    else:
+        print("Triangle:")
+        print_triangle(height)
+
+
+user_input()
