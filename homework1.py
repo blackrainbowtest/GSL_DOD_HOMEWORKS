@@ -1,16 +1,12 @@
-def print_triangle(height):
-    # Set triangle height range
-    for i in range(1, height + 1):
-        print(" " * (height - i) + "*" * (2 * i - 1))  # for symmetry, we use odd numbers
+import math
 
-
-def user_input():
-    height = int(input("Enter the height of the triangle:"))
-    if height <= 0 or height > 10:  # we set here min and max height
-        print("Error: Enter a positive number.")
-    else:
-        print("Triangle:")
-        print_triangle(height)
-
-
-user_input()
+while True:
+    u_input = input('Enter your word (or "q" to quit): ')
+    if u_input.lower() == 'q':
+        break
+    try:
+        # On input Euphoria we get EHA (not EOA) bc len() - 1 == [-1]
+        new_str = u_input[0] + u_input[math.ceil(len(u_input) / 2) - 1] + u_input[-1]
+        print(new_str.upper())
+    except ValueError:
+        print('Uncorrected input, try again.')
