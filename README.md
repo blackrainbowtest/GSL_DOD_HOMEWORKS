@@ -1,40 +1,84 @@
-1. Create a string made of the first, middle and last character
+The First Task:
 
-Write a program to create a new string made of an input string’s first, middle, and last
-character with upper letters
-Hints of steps:
-➢ String index always starts with 0
-➢ Use string indexing to get the character present at the given index.
-➢ Get the index of the middle character by dividing string length by 2
-➢ Use upper method for characters
-➢ Print new string
+The program receives a string of natural numbers as input. From the
+elements of the string, a list of numbers is formed. Write a program to
+perform a cyclic shi; of the elements of the list to the right, where the
+last element becomes the first, and the rest are shi;ed one posi>on
+forward, increasing their indices.
+Input Format:
+A string of space-separated natural numbers is provided as input to the
+program.
+Output Format:
+The program should output the elements of the modified list with a
+cyclic shi;, separa>ng its elements with a single space.
+Sample Input 1:
+1 2 3 4 5
 
-Given:
-str1 = &quot;Euphoria&quot;
-Expected Output:
-EOA
+Sample Output 1:
+5 1 2 3 4
+
+Sample Input 2:
+6 6 6 6 6 6 6
+
+Sample Output 2:
+6 6 6 6 6 6 6
+
+Sample Input 3:
+5 4 3 2 1
+
+Sample Output 3:
+1 5 4 3 2
 
 
-2. Calculate number of days between two given dates
+The Second Task:
 
-Write a program that compares the dates, computes the difference in days, and handle any
-formatting errors.
+Write a program to determine if a number is the product of two
+numbers from a given set. The program should output the result as
+"YES" or "NO".
 
-Hints for steps.
-➢ Prompt the user to enter two dates and times
-➢ Define the date format ( date_format = &quot;%Y-%m-%d %H:%M:%S&quot;)
-➢ Convert the input strings to datetime objects
-➢ Compare the datetime objects and calculate the difference
-➢ Print the difference in days
-For try, except block
-1. Pars Input Strings: (The datetime.strptime() function to convert the input strings to
-datetime objects.)
-2. The subtraction of two datetime objects yields a timedelta object.
-3. Error Handling: Use try block to catch ValueError exceptions if the input strings are
-not in the correct format.
-Given:
-&gt; Enter the first date and time (YYYY-MM-DD HH:MM:SS): 2021-05-05 22:10:22
-&gt; Enter the second date and time (YYYY-MM-DD HH:MM:SS): 2024-01-03 23:01:01
+Input Format:
+The first line contains a natural number n (0 < n < 1000) – the number
+of numbers in the set. The next n lines contain integers that make up
+the set (they can be repeated). Then an integer follows, which either is
+or is not the product of two dis>nct numbers from the set.
+Output Format:
+The program should output "YES" or "NO" according to the problem's
+condi>on.
 
-Expected Output:
-&gt; Difference is 973 days
+Note 1: A number from the set cannot be mul>plied by itself. In other
+words, the two factors must have different indices in the set.
+Note 2: To solve the problem, use nested loops.
+
+Sample Input 1:
+3
+33
+17
+35
+999
+
+Sample Output 1:
+
+NO
+
+Sample Input 2:
+4
+89
+4
+77
+4
+16
+
+Sample Output 2:
+YES
+
+Sample Input 3:
+5
+1
+999
+87
+33
+325
+999
+
+Sample Output 3:
+YES
