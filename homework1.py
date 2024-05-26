@@ -6,7 +6,7 @@ while True:
         if not (1 <= int(u_input) <= 20):
             print('Enter the number between 1 and 20.')
         else:
-            for num in range(1, int(u_input) + 1):
+            for num in range(0, int(u_input) + 1):
                 print(num * num)
     except ValueError:
         print('Uncorrected input, try again.')
