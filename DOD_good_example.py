@@ -15,3 +15,7 @@ print(check_leap(1800))
 print(check_leap(2200))
 print(check_leap(2500))
 print(check_leap(2016))
+
+
+# 
+# (year % 400 == 0) and (year % 100 == 0) or (year % 4 == 0) and (year % 100 != 0)
