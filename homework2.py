@@ -3,7 +3,7 @@ from collections import Counter
 
 # Pangram words does not contain symbols
 def is_pangram(word):
-    text = word.lower().replace(' ', '')  # remove all spaces
+    text = ''.join(filter(str.isalpha, word)).lower()  # remove all spaces
     letters_counts = Counter(text)  # count each letter
     return len(letters_counts) == 26
 
