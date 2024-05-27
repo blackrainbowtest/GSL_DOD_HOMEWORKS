@@ -1,12 +1,22 @@
-import math
+# Տրված են ամբողջ թվերի (integer) զանգվածը և ամբողջ թիվ ներկայացնող թիրախը (target),
+# վերադարձրեք այն երկու թվերի ինդեքսները, որոնց գումարը հավասար կլինի թիրախին (target):
+# Խնդրում եմ հաշվի առնել, որ յուրաքանչյուր մուտքագրում կունենա ճիշտ մեկ լուծում, և դուք
+# չեք կարող օգտագործել նույն տարրը երկու անգամ:
+# Պատասխանը կարող եք վերադարձնել ցանկացած հերթականությամբ։
+# Օրինակ՝
+# Input: nums = [2, 7, 11, 15], target = 9
+# Output: [0, 1]
+# Բացատրություն: nums[0] + nums[1] == 9, we return [0, 1].
 
-while True:
-    u_input = input('Enter your word (or "q" to quit): ')
-    if u_input.lower() == 'q':
-        break
-    try:
-        # On input Euphoria we get EHA (not EOA) bc len() - 1 == [-1]
-        new_str = u_input[0] + u_input[math.ceil(len(u_input) / 2) - 1] + u_input[-1]
-        print(new_str.upper())
-    except ValueError:
-        print('Uncorrected input, try again.')
+u_nums = [2, 7, 11, 15]
+u_target = 9
+
+
+def calculate():
+    for i in range(len(u_nums)):
+        for j in range(len(u_nums)):
+            if i != j and u_nums[i] + u_nums[j] == u_target:
+                return [i, j]
+
+
+print(calculate())
