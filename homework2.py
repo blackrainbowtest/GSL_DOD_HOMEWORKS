@@ -1,13 +1,19 @@
-def sum_func(num_list):
-    max_num = float('-inf')  # set max_num
-    current_num = 0
+from collections import Counter
 
-    for num in num_list:
-        current_num = max(current_num + num, num)
-        max_num = max(current_num, max_num)
+str1 = " python"
+str2 = " phtony"
+str3 = " Java"
+str4 = " apaJ"
+str5 = " 1234"
+str6 = " 2341"
 
-    return max_num
+
+def is_anagram(word1, word2):
+    letters_count_1 = Counter(word1)
+    letters_count_2 = Counter(word2)
+    return letters_count_1 == letters_count_2
 
 
-u_nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-print(sum_func(u_nums))
+print(is_anagram(str1, str2))
+print(is_anagram(str3, str4))
+print(is_anagram(str5, str6))
