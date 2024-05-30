@@ -1,38 +1,24 @@
-With a tuple that user input, write a program to print the first half values in one line and the
-last half values in one line.
-Hints:
-Use [n1:n2] notation to get a slice from a tuple.
-Examples:
-1.Input:
-(10, 20, 30, 40, 50, 60)
-Output:
-First half values: (10, 20, 30)
-Last half values: (40, 50, 60)
-2.Input:
-(1, 3, 5, 7, 9)
-Output:
-First half values: (1, 3)
-Last half values: (5, 7, 9)
+The first task �
 
-Given a non-negative integer num, implement a function that returns True if num is a Curzon
-number, or False otherwise. If 1 plus 2 elevated to num is exactly divisible by 1 plus 2
-multiplied by num, then num is a Curzon number.
-Examples։
-Input: 5
-Output: is_curzon(5) ➞ True
-Explanation.
-# 2 ** 5 + 1 = 33
-# 2 * 5 + 1 = 11
-# 33 is a multiple of 11
-Input: 10
-Output: is_curzon(10) ➞ False
-Explanation.
-# 2 ** 10 + 1 = 1025
-# 2 * 10 + 1 = 21
-# 1025 is not a multiple of 21
-Input: 14
-Output: is_curzon(14) ➞ True
-Explanation.
-# 2 ** 14 + 1 = 16385
-# 2 * 14 + 1 = 29
-# 16385 is a multiple of 29
+Write an algorithm that takes an array and moves all of
+the zeros to the end, preserving the order of the other
+elements.
+
+move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0,
+0]
+
+The second task �
+
+Create a func;on that takes positive integers diff, low,
+high, and returns a list of all Pythagorean triples whose
+smallest side a lies between low and high inclusive
+(assume low <= high) and whose other sides sa;sfy c-b =
+diff. The list should be in ascending order by a.
+
+(1, 2, 10) -> [(3,4,5), (5,12,13), (7,24,25), (9,40,41)]
+(3, 10, 25) -> [(15,36,39), (21,72,75)]
+(4, 100, 100) -> [(100,1248,1252)]
+(10, 91, 99) -> []
+
+The random tests have diff <= 9,999 and low <= high <=
+9,999,999.
