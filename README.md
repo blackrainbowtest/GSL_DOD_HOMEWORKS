@@ -1,24 +1,24 @@
-The first task �
+Task 1: Sort by String Length
+Write a function that takes a list of strings inputted by the user and returns a new list
+that contains the same strings, but sorted by their length in ascending order.
+Expected outputs for various inputs:
+Input: "apple, pie, banana, pear" => Output: ["pie", "pear", "apple", "banana"]
+Input: "a, abc, ab" => Output: ["a", "ab", "abc"]
+Input: "longest, long, longer" => Output: ["long", "longer", "longest"]
+Input: "one, two, three, four" => Output: ["one", "two", "four", "three"]
 
-Write an algorithm that takes an array and moves all of
-the zeros to the end, preserving the order of the other
-elements.
+Task 2: Find Prime Numbers
+Write a function that finds all prime numbers between 0 and 100. A prime number is a
+whole number greater than 1 that can only be divided evenly by 1 and itself. This
+means it has no other divisors (numbers that can be multiplied to get the original
+number).
+For example:
+ 2 is a prime number because it can only be divided by 1 and 2.
+ 3 is a prime number because it can only be divided by 1 and 3.
+ 4 is not a prime number because it can be divided by 1, 2, and 4.
+ 5 is a prime number because it can only be divided by 1 and 5.
 
-move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0,
-0]
+Expected output:
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89,
+97]
 
-The second task �
-
-Create a func;on that takes positive integers diff, low,
-high, and returns a list of all Pythagorean triples whose
-smallest side a lies between low and high inclusive
-(assume low <= high) and whose other sides sa;sfy c-b =
-diff. The list should be in ascending order by a.
-
-(1, 2, 10) -> [(3,4,5), (5,12,13), (7,24,25), (9,40,41)]
-(3, 10, 25) -> [(15,36,39), (21,72,75)]
-(4, 100, 100) -> [(100,1248,1252)]
-(10, 91, 99) -> []
-
-The random tests have diff <= 9,999 and low <= high <=
-9,999,999.

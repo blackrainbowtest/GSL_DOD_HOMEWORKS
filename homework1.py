@@ -1,5 +1,9 @@
-def move_zeros(u_list):
-    return sorted(u_list, key=lambda x: (x == 0))
+def sorted_words():
+    u_input = input('Enter words with spaces: >>> ')
+    u_list = u_input.split()
+    u_list.sort(key=lambda x: len(x))
+
+    return u_list
 
 
-print(move_zeros([1, 0, 1, 2, 0, 1, 3]))
+print(sorted_words())
