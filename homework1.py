@@ -21,7 +21,6 @@ print("Width:", rectangle.width)
 print("Area:", rectangle.show_area())
 print("Perimeter:", rectangle.show_perimeter())
 
-# Масштабирование прямоугольника
 rectangle.scale(2)
 
 print("After scaling:")
