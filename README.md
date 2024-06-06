@@ -1,79 +1,30 @@
-Assignment:
+Task 1
+Python Program to Swap Two Elements in a List
 
-Description:
-Create a Rectangle class that will represent a rectangle. Realize the methods for calculating the area and perimeter of the rectangle, as well as the method for scaling (change sizes factor).
+Given a list in Python and provided the positions of the elements, write a program to swap the
+two elements in the list.
 
-Requirements:
-Rectangle class:
-Attributes: 
-(Length) - length, 
-(width) - width.
-Methods:
-(__init__) - designer, 
-(show_area) - Method for calculating the area.
-(show_perimeter) - The method for calculating the perimeter.
-(scale) - The method for scaling sizes (use factor to change sizes).
+Examples:
 
-Demonstration of work:
+Տրվում է
+ցուցակ
+python-ում եւ
+տրվում է
+երկուսի
+տարրերի
+դիրքը: Գրեք
 
-rectangle = Rectangle(4, 3)
-print("Length:", rectangle.length)
-print("Width:", rectangle.width)
-print("Area:", rectangle.area())
-print("Perimeter:", rectangle.perimeter())
+ծրագիր՝ցուցակի այս երկու տարրերը դիրքով փոխելու համար:
 
-rectangle.scale(2)
-print("Length:", rectangle.length)
-print("Width:", rectangle.width)
-print("Area:", rectangle.area())
-print("Perimeter:", rectangle.perimeter())
-Assignment: Zoo Simulation
+Task 2
+Python program to convert time from 12 hour to 24 hour format
 
-Description:
-Create a zoo simulation with various animals. Each animal must have common characteristics and methods, as well as unique characteristics and behaviors. You need to create classes that model the zoo and its inhabitants, and then write code that demonstrates how they interact.
+Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+Note :Midnight is 12:00:00 AM on a 12-hour clock and 00:00:00 on a 24-hour clock. Noon is 12:00:00 PM
+on 12-hour clock and 12:00:00 on 24-hour clock.
+Examples :
 
-Requirements:
-Basic class Animal:
-Attributes: 
-(name) - name, 
-(age) - age, 
-(weight) - weight.
-Methods: 
-(__init__) - designer, 
-(show_info) - method for displaying information about the animal,
-(make_sound) - the method of sounding.
-
-Subclasses for different types of animals:
-For example: Lion, Elephant, Monkey.
-Override the (make_sound) method for each animal type.
-
-Zoo class:
-Attributes: 
-(NAME) - the name of the zoo, 
-(animals) - the list [... ,... ,...] of animals.
-Methods: 
-(add_animal) - adding an animal to the zoo, 
-(remove_animal) - removal of the animal from the zoo, 
-(show_all_animals) - display of all animals in the zoo.
-Demonstration of work:
-
-Create several animal objects.
-Add them to the zoo.
-Display information about all animals in the zoo.
-Demonstrate the publication of sounds by various animals.
-
-# Demonstration of work
-zoo = Zoo ("City Zoo Redux")
-
-lion = Lion ("Alex", 5, 190)
-elephant = Elephant ("Dumbo", 10, 5400)
-panda = Panda ("Po", 4, 1540)
-
-zoo.add_animal (Lion)
-zoo.add_animal (Elephant)
-zoo.add_animal (Panda)
-
-zoo.show_all_animals ()
-
-zoo.remove_animal (elephant)
-
+Ժամանակը 12-ժամյա AM/PM ձեւաչափով, փոխարկեք այն 24-ժամյա ժամանակի:
+Նշում. Կեսգիշերը ժամը 12:00-ն է 12-ժամյա ժամացույցով եւ 00:00:00-ն 24-ժամյա ժամացույցով:
+Կեսօրը 12:00-ն է 12-ժամյա ժամացույցով եւ 12:00:00-ն՝ 24-ժամյա ժամացույցով:
+Օրինակներ.
