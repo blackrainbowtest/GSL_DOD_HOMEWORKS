@@ -1,19 +1,31 @@
-# Task 1: Number Masking
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
 
-def is_balanced(parentheses):
-    prnt_list = list(parentheses)
-    stack_list = []
-    brackets = {'(': ')', '[': ']', '{': '}'}
-    for prnt in prnt_list:
-        if prnt in "([{":
-            stack_list.append(prnt)
-        elif prnt in ")]}":
-            if len(stack_list) == 0 or not (brackets.get(stack_list[-1], None) == prnt):
-                return False
-            else:
-                stack_list.pop()
-    return True
+    def show_area(self):
+        return self.length * self.width
+
+    def show_perimeter(self):
+        return 2 * (self.length + self.width)
+
+    def scale(self, factor):
+        self.length *= factor
+        self.width *= factor
 
 
-print(is_balanced("(aaaa)aaaa[aaaa(aaaa)aaaa]aaaa{aaaa}aaaa"))
-print(is_balanced("(aaaa)aaaa]aaaa[aaaa{aaaa}aaaa"))
+rectangle = Rectangle(4, 3)
+
+print("Length:", rectangle.length)
+print("Width:", rectangle.width)
+print("Area:", rectangle.show_area())
+print("Perimeter:", rectangle.show_perimeter())
+
+# Масштабирование прямоугольника
+rectangle.scale(2)
+
+print("After scaling:")
+print("Length:", rectangle.length)
+print("Width:", rectangle.width)
+print("Area:", rectangle.show_area())
+print("Perimeter:", rectangle.show_perimeter())
