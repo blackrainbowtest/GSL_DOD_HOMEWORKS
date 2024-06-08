@@ -1,24 +1,75 @@
-Task 1: Sort by String Length
-Write a function that takes a list of strings inputted by the user and returns a new list
-that contains the same strings, but sorted by their length in ascending order.
-Expected outputs for various inputs:
-Input: "apple, pie, banana, pear" => Output: ["pie", "pear", "apple", "banana"]
-Input: "a, abc, ab" => Output: ["a", "ab", "abc"]
-Input: "longest, long, longer" => Output: ["long", "longer", "longest"]
-Input: "one, two, three, four" => Output: ["one", "two", "four", "three"]
+Write a function that masks the input numbers with asterisks (*) and displays only
+the last 4 digits.
 
-Task 2: Find Prime Numbers
-Write a function that finds all prime numbers between 0 and 100. A prime number is a
-whole number greater than 1 that can only be divided evenly by 1 and itself. This
-means it has no other divisors (numbers that can be multiplied to get the original
-number).
-For example:
- 2 is a prime number because it can only be divided by 1 and 2.
- 3 is a prime number because it can only be divided by 1 and 3.
- 4 is not a prime number because it can be divided by 1, 2, and 4.
- 5 is a prime number because it can only be divided by 1 and 5.
+Note:
+• Find the last four digits and place them in result as they are.
+• For the rest of the numbers, you can put * or X.
 
-Expected output:
-[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89,
-97]
+Example 1:
+Input : 1234 5678 1234 5678
+Output : **** **** **** 5678
 
+Example 2:
+Input : 52310259
+Output : XXXX0259
+
+Առաջադրանք 1: Թվերի քողարկում
+
+Գրեք ֆունկցիա, որը քողարկում է մուտքագրված թվերը աստղանիշներով (*) եւ
+ցուցադրում է միայն վերջին 4 նիշերը:
+
+Նշում.
+• Գտեք վերջին չորս թվերը եւ տեղադրեք դրանք արդյունքի մեջ այնպես, ինչպես կան:
+• Մնացած թվերի համար կարող եք դնել * կամ X նշանը։
+
+Օրինակ 1:
+Մուտքագրում: 1234 5678 1234 5678
+Արդյունքը: **** **** **** 5678
+Օրինակ 2:
+Մուտքագրում: 52310259
+Արդյունքը: XXXX0259
+
+Task 2: Password Generator
+
+Write a function to generate random passwords of a specified length (set to 6 by
+default).
+
+Hint:
+• If no length is specified by the user, the password will have 8 characters.
+• The password must contain uppercase and lowercase letters, numbers and symbols
+(!@#$%^&*()_+=-).
+
+Note
+• Use the string() and random() methods to generate the password.
+
+Example 1:
+# password length 6 (default)
+Input : Enter the password length:
+Output : The password is: IaT-h1
+Example 2:
+# password length 12
+Input Enter the password length: 12
+Output : The password is: 98hK;'|^Q91U
+
+Առաջադրանք 2: Գաղտնաբառի գեներատոր
+
+Գրեք ֆունկցիա, որը ստեղծում է որոշակի երկարության (լռելյայն սահմանված
+լինի 6) պատահական գաղտնաբառեր:
+
+Հուշում.
+• Եթե օգտագործողի կողմից երկարություն նշված չէ, գաղտնաբառը պետք է ունենա 6
+նիշ:
+• Գաղտնաբառը պետք է պարունակի մեծատառեր, փոքրատառեր, թվեր եւ սիմվոլներ
+(!@#$%^&*()_+=-)։
+
+Նշում.
+• Գաղտնաբառը ստեղծելու համար օգտագործեք string() եւ random() մեթոդները
+
+Օրինակ 1:
+# password length 6 (default)
+Մուտքագրում: Enter the password length:
+Արդյունքը: The password is: IaT-h1
+Օրինակ 2:
+# password length 12
+Մուտքագրում: Enter the password length: 12
+Արդյունքը: The password is: 98hK;'|^Q91U
