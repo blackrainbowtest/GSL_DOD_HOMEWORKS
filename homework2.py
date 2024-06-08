@@ -1,24 +1,24 @@
-def is_prime(num, prime_list):
-    if num <= 3 or num == 5:
-        return True
-    elif num % 2 != 0 and num % 3 != 0 and num % 5 != 0:
-        for prime in prime_list:
-            if prime * prime > num:
-                break
-            if num % prime == 0:
-                return False
-        return True
-    return False
+import random
+import string
 
 
-def prime_number(end=100, start=2):
-    prime_num_list = []
-    if start < 2:
-        start = 2
-    for num in range(start, end + 1):
-        if is_prime(num, prime_num_list):
-            prime_num_list.append(num)
-    return prime_num_list
+def generate_password(length=8):
+    if length < 8:
+        length = 8
+
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase
+    digits = string.digits
+    symbols = "!@#$%^&*()_+=-"
+    password_required = [random.choice(lower), random.choice(upper), random.choice(digits), random.choice(symbols)]
+    random.shuffle(password_required)
+
+    for _ in range(len(password_required), length):
+        password_required.append(random.choice(lower + upper + digits + symbols))
+
+    random.shuffle(password_required)
+    return ''.join(password_required)
 
 
-print(prime_number(100))
+print(generate_password(2))
+print(generate_password(12))
